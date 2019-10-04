@@ -23,9 +23,9 @@ def make_connection():
 
     from dstk.credstash_config_provider import CredstashConfigProvider
     config_provider = CredstashConfigProvider(
-        kms_key_name='credstash-key-production',
-        dynamodb_table='credit-keystore-production',
-        aws_region='us-west-2',
+        kms_key_name='test',
+        dynamodb_table='test',
+        aws_region='test',
     )
     REDSHIFT_USERNAME = config_provider.get("redshift_username")
     REDSHIFT_PASSWORD = config_provider.get("redshift_password")
