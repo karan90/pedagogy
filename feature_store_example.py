@@ -27,11 +27,11 @@ def make_connection():
         dynamodb_table='test',
         aws_region='test',
     )
-    REDSHIFT_USERNAME = config_provider.get("redshift_username")
-    REDSHIFT_PASSWORD = config_provider.get("redshift_password")
-    REDSHIFT_DATABASE = config_provider.get("redshift_database")
-    REDSHIFT_HOST = config_provider.get('redshift_host')
-    REDSHIFT_PORT = config_provider.get('redshift_port')
+    REDSHIFT_USERNAME = config_provider.get("rs_username")
+    REDSHIFT_PASSWORD = config_provider.get("rs_pass")
+    REDSHIFT_DATABASE = config_provider.get("rs_db")
+    REDSHIFT_HOST = config_provider.get('rs_host')
+    REDSHIFT_PORT = config_provider.get('rs_port')
 
     engine = psycopg2.connect(dbname=REDSHIFT_DATABASE, host=REDSHIFT_HOST, port=REDSHIFT_PORT, user=REDSHIFT_USERNAME, password=REDSHIFT_PASSWORD)
     logger.info(engine)
